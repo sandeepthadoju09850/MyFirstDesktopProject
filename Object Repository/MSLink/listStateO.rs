@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>listStateO</name>
+   <tag></tag>
+   <elementGuidId>8c4d82be-4e80-4d37-a49e-55a8c2ba22fc</elementGuidId>
+   <imagePath>../../Pictures/MN-MSLink.PNG</imagePath>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+      </entry>
+      <entry>
+         <key>CSS</key>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@class='ComboLBox']</value>
+      </entry>
+      <entry>
+         <key>IMAGE</key>
+         <value>../../Pictures/MN-MSLink.PNG</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>IMAGE</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+</WebElementEntity>
