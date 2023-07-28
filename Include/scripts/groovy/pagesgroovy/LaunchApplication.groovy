@@ -37,6 +37,6 @@ class LaunchApplication {
 
 	@Given("Launch MSL Application - (.*)")
 	def launchApplication(String index) {
-		WebUI.callTestCase(findTestCase('Test Cases/NewQuote'), ['pageData' :pageData, 'index' :index])
+		WebUI.callTestCase(findTestCase('Test Cases/MSLScreens/NewQuote'), ['pageData' :pageData, 'index' :index])
 	}
 }

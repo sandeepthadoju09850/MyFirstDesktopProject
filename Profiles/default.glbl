@@ -9,4 +9,9 @@
       <initValue>''</initValue>
       <name>TestData</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>TestCase</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

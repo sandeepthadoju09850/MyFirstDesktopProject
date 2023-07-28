@@ -37,6 +37,6 @@ class PIInsBillingInfo {
 
 	@Given("PI InsBilling Info - (.*)")
 	def pIInsBillingInfo(String index) {
-		WebUI.callTestCase(findTestCase('Test Cases/NewQuote'), ['pageData' :pageData, 'index' :index])
+		WebUI.callTestCase(findTestCase('Test Cases/MSLScreens/NewQuote'), ['pageData' :pageData, 'index' :index])
 	}
 }

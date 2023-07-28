@@ -80,7 +80,6 @@ public class Customkeywords {
 	@Keyword
 	def click(def to) {
 		Windows.click(to, FailureHandling.STOP_ON_FAILURE)
-		
 	}
 
 	@Keyword
