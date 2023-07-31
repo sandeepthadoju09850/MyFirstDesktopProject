@@ -1,4 +1,4 @@
-package dataenum
+package getScreensDetails
 
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
@@ -13,53 +13,29 @@ import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.testcase.TestCase
 import com.kms.katalon.core.testdata.TestData
+import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
-
+import customeKeyword.Customkeywords
+import dataenum.DataFiles
 import internal.GlobalVariable
 
+public class GetRateDetails {
 
+	private String dataSheetPath = GlobalVariable.TestData + "/" + DataFiles.RATEDETAILS.getSheetName();
 
-enum DataFiles {
+	private HashMap pageData;
 
-	LAUNCHAPP("LaunchApp"),
-	PIINSBILLINGINFO("PI_InsBillingInfo"),
-	PIPDISCOUNTCOVERAGE("PI_PolicyDiscCov"),
-	DRIVERHHMEMBER("Driver_HHMember"),
-	DRIVERASSGINMENT("Driver_Assignment"),
-	HOMEDWELLING("Home_Dwelling"),
-	UMBRELLA("Umbrella"),
-	OTHERINFOAUTO("OtherInfo_Auto"),
-	OTHERINFOPRIMARYDWELLING("OtherInfo_PrimaryDwelling"),
-	OTHERINFOGENINFO("OtherInfo_GenInfo"),
-	OTHERINFOUMBRELLA("OtherInfo_Umbrella"),
-	RATEDETAILS("Rate_Details"),
-	AUTO("Auto");
+	public GetRateDetails() {
 
-	private String page;
-
-	private DataFiles(String page) {
-		this.page = page;
+		pageData = new Customkeywords().retrieveTestCaseData(dataSheetPath, GlobalVariable.TestCase);
 	}
 
-	public String getSheetName() {
-		return this.page;
-	}
-}
 
-enum DriverType{
-
-	CHROME("CHROME"),
-
-	private String lbl;
-
-	public String getDriveType() {
-		return this.lbl;
-	}
-
-	private DriverType(String lbl) {
-		this.lbl = lbl;
+	@Keyword
+	def getRateDetails(String index) {
+		WebUI.callTestCase(findTestCase('Test Cases/MSLScreens/Rate'), ['pageData' :pageData, 'index' :index])
 	}
 }

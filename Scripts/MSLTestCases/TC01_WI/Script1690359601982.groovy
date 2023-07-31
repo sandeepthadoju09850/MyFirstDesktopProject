@@ -33,7 +33,11 @@ CustomKeywords.'getScreensDetails.GetHomeDwellingInfoDetails.getHomeDwellingInfo
 CustomKeywords.'getScreensDetails.GetUmbrellaDetails.getUmbrellaDetails'('NewQuote')
 CustomKeywords.'getScreensDetails.GetOtherInfoAutoDetails.getOtherInfoAutoDetails'('NewQuote')
 CustomKeywords.'getScreensDetails.GetOtherInfoPrimaryDwellingDetails.getOtherInfoPrimaryDwellingDetails'('NewQuote')
+CustomKeywords.'getScreensDetails.GetOtherInfoUmbrellaDetails.getOtherInfoUmbrellaDetails'('NewQuote')
 CustomKeywords.'getScreensDetails.GetOtherInfoGenInfo.getOtherInfoGenInfo'('NewQuote')
+CustomKeywords.'getScreensDetails.GetRateDetails.getRateDetails'('NewQuote')
+CustomKeywords.'getScreensDetails.GetHomeDwellingInfoDetails.getHomeDwellingInfoDetails'('NewQuoteRedo')
+CustomKeywords.'getScreensDetails.GetRateDetails.getRateDetails'('NewQuoteRedo')
 
 
 

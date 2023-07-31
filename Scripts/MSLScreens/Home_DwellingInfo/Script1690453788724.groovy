@@ -182,9 +182,25 @@ if ((hash_map.get('DI_CovInfMedPay') != null) && (hash_map.get('DI_CovInfMedPay'
 	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Home_DwellingInfo/Sel_CI_MedicalPayment',[('value') : hash_map.get('DI_CovInfMedPay')]))
 
 }
+if ((hash_map.get('DI_CovInfPersonalLiability') != null) && (hash_map.get('DI_CovInfPersonalLiability').length() > 0)) {
+	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Home_DwellingInfo/Btn_CI_PersonalLiability'))
+	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Home_DwellingInfo/Sel_CI_MedicalPayment',[('value') : hash_map.get('DI_CovInfPersonalLiability')]))
+
+}
+
 if ((hash_map.get('DI_PolicyHolderInsuredWithSecura') != null) && (hash_map.get('DI_PolicyHolderInsuredWithSecura').length() > 0)) {
 	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Home_DwellingInfo/Btn_DI_PolicyHolderInsuredSecura'))
 	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Home_DwellingInfo/Sel_DI_PolicyHolderInsuredSecura',[('value') : hash_map.get('DI_PolicyHolderInsuredWithSecura')]))
 
+}
+
+if ((hash_map.get('DI_BTN_Questions') != null) && (hash_map.get('DI_BTN_Questions').length() > 0)) {
+	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Home_DwellingInfo/Btn_DI_Questions'))
+	
+}
+
+if ((hash_map.get('DQ_BTN_Yes') != null) && (hash_map.get('DQ_BTN_Yes').length() > 0)) {
+	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Home_DwellingInfo/Btn_DQ_Yes'))
+	
 }
 
