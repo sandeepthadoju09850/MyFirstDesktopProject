@@ -36,6 +36,6 @@ public class GetAutoDetails {
 
 	@Keyword
 	def getAutoDetails(String index) {
-		WebUI.callTestCase(findTestCase('Test Cases/MSLScreens/Auto'), ['pageData' :pageData, 'index' :index])
+		WebUI.callTestCase(findTestCase('Test Cases/MSLScreens/Auto'), ['pageData' :pageData, 'index' :index], FailureHandling.CONTINUE_ON_FAILURE)
 	}
 }

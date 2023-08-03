@@ -16,10 +16,8 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import customeKeyword.Customkeywords as Customkeywords
-import dataenum.DataFiles as DataFiles
 
-CustomKeywords.'getScreensDetails.GetGroupAndTestCaseID.getGroupAndTestCaseID'('MSL', 'TC01')
+CustomKeywords.'getScreensDetails.GetGroupAndTestCaseID.getGroupAndTestCaseID'('MSL', 'TC02')
 
 CustomKeywords.'getScreensDetails.GetAppLaunchData.getAppLaunchData'('NewQuote')
 
@@ -28,12 +26,14 @@ CustomKeywords.'getScreensDetails.GetPIInsuredBillingInfo.getPIInsuredBillingInf
 CustomKeywords.'getScreensDetails.GetPolicyDiscountCoverages.getPolicyDiscountCoverages'('NewQuote')
 
 CustomKeywords.'getScreensDetails.GetAutoDetails.getAutoDetails'('NewQuote')
+CustomKeywords.'getScreensDetails.GetAutoDetails.getAutoDetails'('NewQuoteTwo')
 
 CustomKeywords.'getScreensDetails.GetDriverHHMemberDetails.getDriverHHMemberDetails'('NewQuote')
 
 CustomKeywords.'getScreensDetails.GetDriverHHMemberDetails.getDriverHHMemberDetails'('NewQuoteTwo')
 
 CustomKeywords.'getScreensDetails.GetDriverAssignmentDetails.getDriverAssignmentDetails'('NewQuote')
+CustomKeywords.'getScreensDetails.GetDriverAssignmentDetails.getDriverAssignmentDetails'('NewQuoteTwo')
 
 CustomKeywords.'getScreensDetails.GetHomeDwellingInfoDetails.getHomeDwellingInfoDetails'('NewQuote')
 
@@ -41,17 +41,14 @@ CustomKeywords.'getScreensDetails.GetUmbrellaDetails.getUmbrellaDetails'('NewQuo
 
 CustomKeywords.'getScreensDetails.GetOtherInfoAutoDetails.getOtherInfoAutoDetails'('NewQuote')
 
-//CustomKeywords.'getScreensDetails.GetOtherInfoPrimaryDwellingDetails.getOtherInfoPrimaryDwellingDetails'('NewQuote')
+CustomKeywords.'getScreensDetails.GetOtherInfoPrimaryDwellingDetails.getOtherInfoPrimaryDwellingDetails'('NewQuote')
 
-//CustomKeywords.'getScreensDetails.GetOtherInfoUmbrellaDetails.getOtherInfoUmbrellaDetails'('NewQuote')
+CustomKeywords.'getScreensDetails.GetOtherInfoUmbrellaDetails.getOtherInfoUmbrellaDetails'('NewQuote')
 
-//CustomKeywords.'getScreensDetails.GetOtherInfoGenInfo.getOtherInfoGenInfo'('NewQuote')
+CustomKeywords.'getScreensDetails.GetOtherInfoGenInfo.getOtherInfoGenInfo'('NewQuote')
 
-//CustomKeywords.'getScreensDetails.GetRateDetails.getRateDetails'('NewQuote')
+CustomKeywords.'getScreensDetails.GetRateDetails.getRateDetails'('NewQuote')
 
-//CustomKeywords.'getScreensDetails.GetHomeDwellingInfoDetails.getHomeDwellingInfoDetails'('NewQuoteRedo')
+CustomKeywords.'getScreensDetails.GetHomeDwellingInfoDetails.getHomeDwellingInfoDetails'('NewQuoteRedo')
 
-//CustomKeywords.'getScreensDetails.GetRateDetails.getRateDetails'('NewQuoteRedo')
-
-
-
+CustomKeywords.'getScreensDetails.GetRateDetails.getRateDetails'('NewQuoteRedo')

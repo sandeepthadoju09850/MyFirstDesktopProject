@@ -24,28 +24,19 @@ def hash_map = pageData.get(((GlobalVariable.TestCase) + '-') + strIndex)
 if ((hash_map.get('IB_Agency') != null) && (hash_map.get('IB_Agency').length() > 0)) {
     CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/PI_InsBillingInfo/Btn_PI_AgencyName'))
 
-    CustomKeywords.'customeKeyword.Customkeywords.sendKeys'(findWindowsObject('Object Repository/MSLink/PI_InsBillingInfo/Btn_PI_AgencyName'), 
-        hash_map.get('IB_Agency'))
-
-    CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/PI_InsBillingInfo/Sel_PI_AgencyName'))
-}
+     CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Sel_AT_Usage',[('value') : hash_map.get('IB_Agency')]))
+  }
 
 if ((hash_map.get('IB_PolicyType') != null) && (hash_map.get('IB_PolicyType').length() > 0)) {
     CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/PI_InsBillingInfo/Btn_PI_PolicyType'))
 
-    CustomKeywords.'customeKeyword.Customkeywords.sendKeys'(findWindowsObject('Object Repository/MSLink/PI_InsBillingInfo/Btn_PI_PolicyType'), 
-        hash_map.get('IB_PolicyType'))
-
-    CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/PI_InsBillingInfo/Sel_PI_PolicyType'))
-}
+   CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Sel_AT_Usage',[('value') : hash_map.get('IB_PolicyType')]))
+ }
 
 if ((hash_map.get('IB_PayPlan') != null) && (hash_map.get('IB_PayPlan').length() > 0)) {
     CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/PI_InsBillingInfo/Btn_PI_PolicyPlan'))
-
-    CustomKeywords.'customeKeyword.Customkeywords.sendKeys'(findWindowsObject('Object Repository/MSLink/PI_InsBillingInfo/Btn_PI_PolicyPlan'), 
-        hash_map.get('IB_PayPlan'))
-
-    CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/PI_InsBillingInfo/Sel_PI_PolicyPlan'))
+	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Sel_AT_Usage',[('value') : hash_map.get('IB_PayPlan')]))
+	
 }
 
 if ((hash_map.get('IB_NameInsFirst') != null) && (hash_map.get('IB_NameInsFirst').length() > 0)) {

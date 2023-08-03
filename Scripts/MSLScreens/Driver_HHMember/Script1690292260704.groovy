@@ -28,6 +28,12 @@ if ((hash_map.get('Driver_TabName') != null) && (hash_map.get('Driver_TabName').
 	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Driver_HHMember/Tab_DR_TabName',[('value') : hash_map.get('Driver_TabName')]))
 }
 
+if ((hash_map.get('Driver_Relationship') != null) && (hash_map.get('Driver_Relationship').length() > 0)) {
+	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Driver_HHMember/Btn_DR_Relationship'))
+
+	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Driver_HHMember/Sel_DR_LI_LicenseStatus',
+			[('value') : hash_map.get('Driver_Relationship')]))
+}
 
 if ((hash_map.get('Driver_HHMem_LicInfoLicStatus') != null) && (hash_map.get('Driver_HHMem_LicInfoLicStatus').length() > 0)) {
 	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Driver_HHMember/Btn_DR_LI_LicenseStatus'))

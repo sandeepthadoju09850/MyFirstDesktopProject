@@ -25,16 +25,27 @@ if ((hash_map.get('BTN_Rate') != null) && (hash_map.get('BTN_Rate').length() > 0
     CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/RateDetails/Btn_RATE'))
 }
 
-Thread.sleep(8000)
-
 if ((hash_map.get('BTN_AddressValidationYes') != null) && (hash_map.get('BTN_AddressValidationYes').length() > 0)) {
+    
+   Thread.sleep(5000)
     CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/RateDetails/Btn_AddressChangeYes'))
+
+    
 }
 
 if ((hash_map.get('BTN_RateMessageOK') != null) && (hash_map.get('BTN_RateMessageOK').length() > 0)) {
     CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/RateDetails/Btn_RateMessage_OK'))
 }
 
+//Windows.switchToWindowTitle('MS-Link')
+CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('MSLink/RateDetails/Btn_Win_Close'))
+
+/*
+Boolean Win = Windows.verifyElementPresent(findWindowsObject('MSLink/RateDetails/Btn_Win_Close'), 5)
+if(Win) {
+	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('MSLink/RateDetails/Btn_Win_Close'))	
+}
+*/
 if ((hash_map.get('BTN_UnableToRateOK') != null) && (hash_map.get('BTN_UnableToRateOK').length() > 0)) {
     CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Btn_AT_UW_OK'))
 }
@@ -42,15 +53,25 @@ if ((hash_map.get('BTN_UnableToRateOK') != null) && (hash_map.get('BTN_UnableToR
 if ((hash_map.get('TotalPremium') != null) && (hash_map.get('TotalPremium').length() > 0)) {
     String PolicyPremium = Windows.getText(findWindowsObject('MSLink/RateDetails/Lbl_Rate_PolicyPremium'))
 
+    Windows.verifyEqual(PolicyPremium, hash_map.get('TotalPremium'), FailureHandling.CONTINUE_ON_FAILURE)
+}
+
+if ((hash_map.get('AutoPremium') != null) && (hash_map.get('AutoPremium').length() > 0)) {
     String AutoPremium = Windows.getText(findWindowsObject('Object Repository/MSLink/RateDetails/Lbl_Rate_AutoPremium'))
 
-    String PrimaryResidencyPremium = Windows.getText(findWindowsObject('Object Repository/MSLink/RateDetails/Lbl_Rate_PrimaryResidencyPremium'))
+    Windows.verifyEqual(AutoPremium, hash_map.get('AutoPremium'), FailureHandling.CONTINUE_ON_FAILURE)
+}
 
-    String UmbrellaPremium = Windows.getText(findWindowsObject('Object Repository/MSLink/RateDetails/Lbl_Rate_UmbrellaPremium'))
+if ((hash_map.get('PrimaryResidencyPremium') != null) && (hash_map.get('PrimaryResidencyPremium').length() > 0)) {
+    String PResPremium = Windows.getText(findWindowsObject('Object Repository/MSLink/RateDetails/Lbl_Rate_PrimaryResidencyPremium'))
 
-    Windows.verifyEqual(PolicyPremium, hash_map.get('TotalPremium'))
+    Windows.verifyEqual(PResPremium, hash_map.get('PrimaryResidencyPremium'), FailureHandling.CONTINUE_ON_FAILURE)
+}
 
-    //Windows.verifyMatch(findWindowsObject(null), '', false)
+if ((hash_map.get('UmbrellaPremium') != null) && (hash_map.get('UmbrellaPremium').length() > 0)) {
+    String UMPremium = Windows.getText(findWindowsObject('Object Repository/MSLink/RateDetails/Lbl_Rate_UmbrellaPremium'))
+
+    Windows.verifyEqual(UMPremium, hash_map.get('UmbrellaPremium'), FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 if ((hash_map.get('BTN_RateClose') != null) && (hash_map.get('BTN_RateClose').length() > 0)) {

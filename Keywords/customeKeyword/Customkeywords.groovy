@@ -79,6 +79,7 @@ public class Customkeywords {
 
 	@Keyword
 	def click(def to) {
+		//Windows.waitForElementPresent(to, 10, FailureHandling.CONTINUE_ON_FAILURE)
 		Windows.click(to, FailureHandling.STOP_ON_FAILURE)
 	}
 

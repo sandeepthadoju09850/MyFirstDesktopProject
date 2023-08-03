@@ -34,6 +34,11 @@ if ((hash_map.get('PDC_WelcomeDisc') != null) && (hash_map.get('PDC_WelcomeDisc'
 	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/PI_PolicyDiscAndCov/Sel_PI_WelcomeDiscount',['value':hash_map.get('PDC_WelcomeDisc')]))
 }
 
+if ((hash_map.get('PDC_EarlyDiscount') != null) && (hash_map.get('PDC_EarlyDiscount').length() > 0)) {
+	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/PI_PolicyDiscAndCov/Btn_EarlyDiscount'))
+	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/PI_PolicyDiscAndCov/Sel_PI_WelcomeDiscount',['value':hash_map.get('PDC_EarlyDiscount')]))
+}
+
 if ((hash_map.get('PDC_GroupAssoc') != null) && (hash_map.get('PDC_GroupAssoc').length() > 0)) {
 	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/PI_PolicyDiscAndCov/Btn_PI_GroupAssociation'))
 	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/PI_PolicyDiscAndCov/Sel_PI_GroupAssociation',['value':hash_map.get('PDC_GroupAssoc')]))

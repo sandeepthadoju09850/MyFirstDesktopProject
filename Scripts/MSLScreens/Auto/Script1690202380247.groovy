@@ -23,12 +23,38 @@ def hash_map = pageData.get(((GlobalVariable.TestCase) + '-') + strIndex)
 
 CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Tab_Auto'))
 
+if ((hash_map.get('Add_Auto') != null) && (hash_map.get('Add_Auto').length() > 0)) {
+	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Btn_AT_AddAuto'))	
+}
+
 if ((hash_map.get('Auto_VehInfVIN') != null) && (hash_map.get('Auto_VehInfVIN').length() > 0)) {
     CustomKeywords.'customeKeyword.Customkeywords.sendKeys'(findWindowsObject('Object Repository/MSLink/Auto/Txt_AT_VIN'), 
         hash_map.get('Auto_VehInfVIN'))
 
     CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Txt_AT_AnnualMileage'))
+	
+	}
+
+if ((hash_map.get('Auto_Year') != null) && (hash_map.get('Auto_Year').length() > 0)) {
+		String AutoYear = Windows.getText(findWindowsObject('Object Repository/MSLink/Auto/Txt_AT_Year'))
+		Windows.verifyEqual(AutoYear, hash_map.get('Auto_Year') ,FailureHandling.CONTINUE_ON_FAILURE)
 }
+
+if ((hash_map.get('Auto_Make') != null) && (hash_map.get('Auto_Make').length() > 0)) {
+	String AutoMake = Windows.getText(findWindowsObject('Object Repository/MSLink/Auto/Btn_AT_Make'))
+	Windows.verifyEqual(AutoMake, hash_map.get('Auto_Make') ,FailureHandling.CONTINUE_ON_FAILURE)
+}
+
+if ((hash_map.get('Auto_Model') != null) && (hash_map.get('Auto_Model').length() > 0)) {
+	String AutoModel = Windows.getText(findWindowsObject('Object Repository/MSLink/Auto/Btn_AT_Model'))
+	Windows.verifyEqual(AutoModel, hash_map.get('Auto_Model') ,FailureHandling.CONTINUE_ON_FAILURE)
+}
+
+if ((hash_map.get('Auto_SymbolTwo') != null) && (hash_map.get('Auto_SymbolTwo').length() > 0)) {
+	String AutoSymbolTwo = Windows.getText(findWindowsObject('Object Repository/MSLink/Auto/Txt_AT_Year'))
+	Windows.verifyEqual(AutoSymbolTwo, hash_map.get('Auto_SymbolTwo') ,FailureHandling.CONTINUE_ON_FAILURE)
+}
+
 
 if ((hash_map.get('Auto_VehInfType') != null) && (hash_map.get('Auto_VehInfType').length() > 0)) {
     CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Btn_AT_VehicleType'))
@@ -75,6 +101,13 @@ if ((hash_map.get('Auto_UninsMot') != null) && (hash_map.get('Auto_UninsMot').le
 
     CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Sel_AT_UninsuredMotorist', 
             [('value') : hash_map.get('Auto_UninsMot')]))
+}
+
+if ((hash_map.get('Auto_UnderInsMot') != null) && (hash_map.get('Auto_UnderInsMot').length() > 0)) {
+	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Btn_CI_UnderInsMotr'))
+
+	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Sel_AT_UninsuredMotorist',
+			[('value') : hash_map.get('Auto_UnderInsMot')]))
 }
 
 if ((hash_map.get('Auto_OtherInfPrCarAutoInfBtn') != null) && (hash_map.get('Auto_OtherInfPrCarAutoInfBtn').length() > 0)) {
