@@ -27,18 +27,30 @@ if ((hash_map.get('BTN_Rate') != null) && (hash_map.get('BTN_Rate').length() > 0
 
 if ((hash_map.get('BTN_AddressValidationYes') != null) && (hash_map.get('BTN_AddressValidationYes').length() > 0)) {
     
-   Thread.sleep(5000)
+
+    Windows.delay(8)
+
     CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/RateDetails/Btn_AddressChangeYes'))
 
-    
+    Windows.delay(5)
+	
+	Windows.switchToDesktop()
+	
+	Windows.switchToWindow(findWindowsObject('Object Repository/MSLink/RateDetails/Btn_Win_Close'), FailureHandling.CONTINUE_ON_FAILURE)
+	
+	Windows.closeApplication()
+	
+	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/RateDetails/Btn_Win_Close'))
+	
+	Windows.switchToWindowTitle('SECURA\'s MILE-STONe Link')
 }
 
 if ((hash_map.get('BTN_RateMessageOK') != null) && (hash_map.get('BTN_RateMessageOK').length() > 0)) {
+	Windows.delay(5)
     CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/RateDetails/Btn_RateMessage_OK'))
 }
 
-//Windows.switchToWindowTitle('MS-Link')
-CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('MSLink/RateDetails/Btn_Win_Close'))
+
 
 /*
 Boolean Win = Windows.verifyElementPresent(findWindowsObject('MSLink/RateDetails/Btn_Win_Close'), 5)

@@ -47,11 +47,11 @@ CustomKeywords.'getScreensDetails.GetOtherInfoAutoDetails.getOtherInfoAutoDetail
 
 //CustomKeywords.'getScreensDetails.GetOtherInfoGenInfo.getOtherInfoGenInfo'('NewQuote')
 
-//CustomKeywords.'getScreensDetails.GetRateDetails.getRateDetails'('NewQuote')
+CustomKeywords.'getScreensDetails.GetRateDetails.getRateDetails'('NewQuote')
 
-//CustomKeywords.'getScreensDetails.GetHomeDwellingInfoDetails.getHomeDwellingInfoDetails'('NewQuoteRedo')
+CustomKeywords.'getScreensDetails.GetHomeDwellingInfoDetails.getHomeDwellingInfoDetails'('NewQuoteRedo')
 
-//CustomKeywords.'getScreensDetails.GetRateDetails.getRateDetails'('NewQuoteRedo')
+CustomKeywords.'getScreensDetails.GetRateDetails.getRateDetails'('NewQuoteRedo')
 
 
 

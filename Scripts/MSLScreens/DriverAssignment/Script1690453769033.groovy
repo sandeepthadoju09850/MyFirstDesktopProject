@@ -22,3 +22,15 @@ def strIndex = "$index"
 def hash_map = pageData.get(((GlobalVariable.TestCase) + '-') + strIndex)
 
 CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/DriverAssignment/Tab_DriverAssignment'))
+
+if ((hash_map.get('DA_VehPrimaryOpeator') != null) && (hash_map.get('DA_VehPrimaryOpeator').length() > 0)) {
+	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/DriverAssignment/Btn_PrimaryOperator'))
+	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/DriverAssignment/Sel_PrimaryOperator',
+			[('value') : hash_map.get('DA_VehPrimaryOpeator')]))
+}
+if ((hash_map.get('DA_VehPrimaryOpeatorTwo') != null) && (hash_map.get('DA_VehPrimaryOpeatorTwo').length() > 0)) {
+	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/DriverAssignment/Btn_PrimaryOperatorTwo'))
+	CustomKeywords.'customeKeyword.Customkeywords.sendKeys'(findWindowsObject('Object Repository/MSLink/DriverAssignment/Btn_PrimaryOperatorTwo'),
+		hash_map.get('DA_VehPrimaryOpeatorTwo'))
+	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/DriverAssignment/Btn_PrimaryOperatorTwo'))
+}

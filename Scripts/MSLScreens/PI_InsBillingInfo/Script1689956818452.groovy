@@ -59,6 +59,12 @@ if ((hash_map.get('IB_LocAddHouse') != null) && (hash_map.get('IB_LocAddHouse').
         hash_map.get('IB_LocAddHouse'))
 }
 
+if ((hash_map.get('IB_LocAddDir') != null) && (hash_map.get('IB_LocAddDir').length() > 0)) {
+	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/PI_InsBillingInfo/Btn_PI_Direction'))
+	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Home_DwellingInfo/Sel_CI_HailWindDect',[('value') : hash_map.get('IB_LocAddDir')]))
+
+}
+
 if ((hash_map.get('IB_LocAddStName') != null) && (hash_map.get('IB_LocAddStName').length() > 0)) {
     CustomKeywords.'customeKeyword.Customkeywords.sendKeys'(findWindowsObject('Object Repository/MSLink/PI_InsBillingInfo/Txt_PI_StreetName'), 
         hash_map.get('IB_LocAddStName'))

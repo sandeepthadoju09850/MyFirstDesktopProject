@@ -33,7 +33,6 @@ CustomKeywords.'getScreensDetails.GetDriverHHMemberDetails.getDriverHHMemberDeta
 CustomKeywords.'getScreensDetails.GetDriverHHMemberDetails.getDriverHHMemberDetails'('NewQuoteTwo')
 
 CustomKeywords.'getScreensDetails.GetDriverAssignmentDetails.getDriverAssignmentDetails'('NewQuote')
-CustomKeywords.'getScreensDetails.GetDriverAssignmentDetails.getDriverAssignmentDetails'('NewQuoteTwo')
 
 CustomKeywords.'getScreensDetails.GetHomeDwellingInfoDetails.getHomeDwellingInfoDetails'('NewQuote')
 
@@ -43,12 +42,10 @@ CustomKeywords.'getScreensDetails.GetOtherInfoAutoDetails.getOtherInfoAutoDetail
 
 CustomKeywords.'getScreensDetails.GetOtherInfoPrimaryDwellingDetails.getOtherInfoPrimaryDwellingDetails'('NewQuote')
 
-CustomKeywords.'getScreensDetails.GetOtherInfoUmbrellaDetails.getOtherInfoUmbrellaDetails'('NewQuote')
+//CustomKeywords.'getScreensDetails.GetOtherInfoUmbrellaDetails.getOtherInfoUmbrellaDetails'('NewQuote')
 
 CustomKeywords.'getScreensDetails.GetOtherInfoGenInfo.getOtherInfoGenInfo'('NewQuote')
 
 CustomKeywords.'getScreensDetails.GetRateDetails.getRateDetails'('NewQuote')
 
-CustomKeywords.'getScreensDetails.GetHomeDwellingInfoDetails.getHomeDwellingInfoDetails'('NewQuoteRedo')
 
-CustomKeywords.'getScreensDetails.GetRateDetails.getRateDetails'('NewQuoteRedo')

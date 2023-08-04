@@ -62,7 +62,7 @@ if ((hash_map.get('DI_SecondaryHeat') != null) && (hash_map.get('DI_SecondaryHea
 }
 
 if ((hash_map.get('DI_LossesDuring3Years') != null) && (hash_map.get('DI_LossesDuring3Years').length() > 0)) {
-	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Home_DwellingInfo/Btn_DI_LossesIN3YearsYes'))
+	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Home_DwellingInfo/Chk_DI_AnyLosses3YearsNo',[('value') : hash_map.get('DI_LossesDuring3Years')]))
 }
 
 if ((hash_map.get('DI_HLMTypeOfLoss') != null) && (hash_map.get('DI_HLMTypeOfLoss').length() > 0)) {
@@ -175,6 +175,11 @@ if ((hash_map.get('DI_CovInfWindHailded') != null) && (hash_map.get('DI_CovInfWi
 if ((hash_map.get('DI_CovInfDwelling') != null) && (hash_map.get('DI_CovInfDwelling').length() > 0)) {
 	CustomKeywords.'customeKeyword.Customkeywords.sendKeys'(findWindowsObject('Object Repository/MSLink/Home_DwellingInfo/Txt_CI_Dwelling'),
 		hash_map.get('DI_CovInfDwelling'))
+}
+
+if ((hash_map.get('DI_CovcovInfPP') != null) && (hash_map.get('DI_CovcovInfPP').length() > 0)) {
+	CustomKeywords.'customeKeyword.Customkeywords.sendKeys'(findWindowsObject('Object Repository/MSLink/Home_DwellingInfo/Txt_CI_PersonalProperty'),
+		hash_map.get('DI_CovcovInfPP'))
 }
 
 if ((hash_map.get('DI_CovInfMedPay') != null) && (hash_map.get('DI_CovInfMedPay').length() > 0)) {

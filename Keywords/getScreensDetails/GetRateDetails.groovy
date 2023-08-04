@@ -36,6 +36,6 @@ public class GetRateDetails {
 
 	@Keyword
 	def getRateDetails(String index) {
-		WebUI.callTestCase(findTestCase('Test Cases/MSLScreens/Rate'), ['pageData' :pageData, 'index' :index])
+		WebUI.callTestCase(findTestCase('Test Cases/MSLScreens/Rate'), ['pageData' :pageData, 'index' :index],FailureHandling.CONTINUE_ON_FAILURE)
 	}
 }
