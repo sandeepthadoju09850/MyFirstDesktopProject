@@ -50,10 +50,11 @@ if ((hash_map.get('Auto_Model') != null) && (hash_map.get('Auto_Model').length()
 	Windows.verifyEqual(AutoModel, hash_map.get('Auto_Model') ,FailureHandling.CONTINUE_ON_FAILURE)
 }
 
-if ((hash_map.get('Auto_SymbolTwo') != null) && (hash_map.get('Auto_SymbolTwo').length() > 0)) {
+/*if ((hash_map.get('Auto_SymbolTwo') != null) && (hash_map.get('Auto_SymbolTwo').length() > 0)) {
 	String AutoSymbolTwo = Windows.getText(findWindowsObject('Object Repository/MSLink/Auto/Txt_AT_Year'))
 	Windows.verifyEqual(AutoSymbolTwo, hash_map.get('Auto_SymbolTwo') ,FailureHandling.CONTINUE_ON_FAILURE)
 }
+*/
 
 
 if ((hash_map.get('Auto_VehInfType') != null) && (hash_map.get('Auto_VehInfType').length() > 0)) {

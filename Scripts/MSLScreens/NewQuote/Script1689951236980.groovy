@@ -21,6 +21,7 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable
 import customeKeyword.Customkeywords
+import customeKeyword.WindowsImprovedKeywords
 import dataenum.DataFiles
 
 
@@ -34,7 +35,10 @@ Windows.startApplicationWithTitle('N:\\MSLink\\_Test\\MS-Link.exe', 'MSL')
 
 Windows.click(findWindowsObject('Object Repository/MSLink/AppLaunch/btnOk'))
 
-Windows.switchToWindowTitle('SECURA\'s MILE-STONe Link')
+CustomKeywords.'customeKeyword.WindowsImprovedKeywords.switchToWindowTitle'('SECURA\'s MILE-STONe Link')
+
+
+//Windows.switchToWindowTitle('SECURA\'s MILE-STONe Link')
 
 Windows.click(findWindowsObject('Object Repository/MSLink/AppLaunch/btnMaxWindow'))
 

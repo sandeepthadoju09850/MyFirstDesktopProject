@@ -34,15 +34,16 @@ if ((hash_map.get('BTN_AddressValidationYes') != null) && (hash_map.get('BTN_Add
 
     Windows.delay(5)
 	
-	Windows.switchToDesktop()
-	
-	Windows.switchToWindow(findWindowsObject('Object Repository/MSLink/RateDetails/Btn_Win_Close'), FailureHandling.CONTINUE_ON_FAILURE)
+	/*Windows.switchToDesktop()
+
+	CustomKeywords.'customeKeyword.WindowsImprovedKeywords.switchToWindowTitle'('MS-Link')
 	
 	Windows.closeApplication()
 	
-	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/RateDetails/Btn_Win_Close'))
+	//CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/RateDetails/Btn_Win_Close'))
 	
-	Windows.switchToWindowTitle('SECURA\'s MILE-STONe Link')
+	CustomKeywords.'customeKeyword.WindowsImprovedKeywords.switchToWindowTitle'('SECURA\'s MILE-STONe Link')
+	*/
 }
 
 if ((hash_map.get('BTN_RateMessageOK') != null) && (hash_map.get('BTN_RateMessageOK').length() > 0)) {
@@ -88,5 +89,7 @@ if ((hash_map.get('UmbrellaPremium') != null) && (hash_map.get('UmbrellaPremium'
 
 if ((hash_map.get('BTN_RateClose') != null) && (hash_map.get('BTN_RateClose').length() > 0)) {
     CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/RateDetails/Btn_Rate_Close'))
-}
+	Windows.closeApplication()
+
+	}
 
