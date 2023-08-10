@@ -25,8 +25,10 @@ CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object R
 
 if ((hash_map.get('DA_VehPrimaryOpeator') != null) && (hash_map.get('DA_VehPrimaryOpeator').length() > 0)) {
 	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/DriverAssignment/Btn_PrimaryOperator'))
-	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/DriverAssignment/Sel_PrimaryOperator',
-			[('value') : hash_map.get('DA_VehPrimaryOpeator')]))
+	CustomKeywords.'customeKeyword.Customkeywords.sendKeys'(findWindowsObject('Object Repository/MSLink/DriverAssignment/Btn_PrimaryOperator'),
+		hash_map.get('DA_VehPrimaryOpeator'))
+	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/DriverAssignment/Btn_PrimaryOperator'))
+	
 }
 if ((hash_map.get('DA_VehPrimaryOpeatorTwo') != null) && (hash_map.get('DA_VehPrimaryOpeatorTwo').length() > 0)) {
 	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/DriverAssignment/Btn_PrimaryOperatorTwo'))

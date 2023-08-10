@@ -1,7 +1,7 @@
 
-Feature: Login
+Feature: TC02
 
-  Scenario Outline: Valid Login
+  Scenario Outline: MO State
 
     Given Get Group and TC data <GROUP> - <TC>
     When Launch MSL Application - NewQuote

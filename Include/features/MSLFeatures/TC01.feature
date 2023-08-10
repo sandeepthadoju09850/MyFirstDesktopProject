@@ -1,7 +1,7 @@
 
 Feature: TC01_WI
  
-  Scenario Outline: TC01_WI
+  Scenario Outline: WI State
   
     Given Get Group and TC data <GROUP> - <TC>
     When Launch MSL Application - NewQuote
