@@ -3,6 +3,6 @@
    <description></description>
    <name>Sel_AT_MedicalPayment</name>
    <tag></tag>
-   <locator>//*[@Name='${value}']</locator>
-   <locatorStrategy>XPATH</locatorStrategy>
+   <locator>${value}</locator>
+   <locatorStrategy>NAME</locatorStrategy>
 </WindowsElementEntity>

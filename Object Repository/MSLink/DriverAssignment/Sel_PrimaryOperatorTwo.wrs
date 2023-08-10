@@ -3,6 +3,6 @@
    <description></description>
    <name>Sel_PrimaryOperatorTwo</name>
    <tag></tag>
-   <locator>Gal Gadot</locator>
+   <locator>${value}</locator>
    <locatorStrategy>NAME</locatorStrategy>
 </WindowsElementEntity>

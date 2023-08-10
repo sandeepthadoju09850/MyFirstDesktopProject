@@ -1,4 +1,4 @@
-package getScreensDetails
+package pagesgroovy
 
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
@@ -18,26 +18,23 @@ import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import cucumber.api.java.en.Given
 import customeKeyword.Customkeywords
-import dataenum.DataFiles
 import internal.GlobalVariable
+import dataenum.DataFiles
 
+public class PI_PolicyDiscountCov {
 
-
-public class GetHomeDwellingInfoDetails {
-
-	private String dataSheetPath = GlobalVariable.TestData + "/" + DataFiles.HOMEDWELLING.getSheetName();
+	private String dataSheetPath = GlobalVariable.TestData + "/" + DataFiles.PIPDISCOUNTCOVERAGE.getSheetName();
 
 	private HashMap pageData;
 
-	public GetHomeDwellingInfoDetails() {
-
+	public PI_PolicyDiscountCov() {
 		pageData = new Customkeywords().retrieveTestCaseData(dataSheetPath, GlobalVariable.TestCase);
 	}
 
-
-	@Keyword
-	def getHomeDwellingInfoDetails(String index) {
-		WebUI.callTestCase(findTestCase('Test Cases/MSLScreens/Home_DwellingInfo'), ['pageData' :pageData, 'index' :index])
+	@Given("Enter PI Policy Discount Coverages - (.*)")
+	def pIInsBillingInfo(String index) {
+		WebUI.callTestCase(findTestCase('Test Cases/MSLScreens/PI_PolicyDiscountCoverages'), ['pageData' :pageData, 'index' :index])
 	}
 }

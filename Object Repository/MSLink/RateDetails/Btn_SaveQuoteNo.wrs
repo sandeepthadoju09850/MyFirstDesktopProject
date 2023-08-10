@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowsElementEntity>
    <description></description>
-   <name>Sel_PI_GroupAssociation</name>
+   <name>Btn_SaveQuoteNo</name>
    <tag></tag>
-   <locator>${value}</locator>
+   <locator>No</locator>
    <locatorStrategy>NAME</locatorStrategy>
 </WindowsElementEntity>

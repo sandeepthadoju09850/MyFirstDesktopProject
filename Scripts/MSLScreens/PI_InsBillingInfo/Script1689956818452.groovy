@@ -23,8 +23,9 @@ def hash_map = pageData.get(((GlobalVariable.TestCase) + '-') + strIndex)
 
 if ((hash_map.get('IB_Agency') != null) && (hash_map.get('IB_Agency').length() > 0)) {
     CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/PI_InsBillingInfo/Btn_PI_AgencyName'))
-
-     CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Sel_AT_Usage',[('value') : hash_map.get('IB_Agency')]))
+	CustomKeywords.'customeKeyword.Customkeywords.sendKeys'(findWindowsObject('Object Repository/MSLink/PI_InsBillingInfo/Btn_PI_AgencyName'),
+		hash_map.get('IB_Agency'))
+     CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/PI_InsBillingInfo/Btn_PI_AgencyName'))
 } 
 
 if ((hash_map.get('IB_PolicyType') != null) && (hash_map.get('IB_PolicyType').length() > 0)) {

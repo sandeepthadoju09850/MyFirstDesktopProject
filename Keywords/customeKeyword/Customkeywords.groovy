@@ -72,7 +72,9 @@ public class Customkeywords {
 
 	@Keyword
 	def sendKeys(def to,String value) {
+		
 		Windows.sendKeys(to, value)
+		
 	}
 
 
@@ -80,8 +82,9 @@ public class Customkeywords {
 	@Keyword
 	def click(def to) {
 		//Windows.waitForElementPresent(to, 10, FailureHandling.CONTINUE_ON_FAILURE)
-
+		
 		Windows.click(to, FailureHandling.STOP_ON_FAILURE)
+		
 	}
 
 	@Keyword

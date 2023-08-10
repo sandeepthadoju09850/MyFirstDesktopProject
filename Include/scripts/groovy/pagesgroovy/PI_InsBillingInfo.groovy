@@ -26,17 +26,17 @@ import dataenum.DataFiles
 class PIInsBillingInfo {
 
 
-	private String dataSheetPath = GlobalVariable.TestData['Group'] + "/" + DataFiles.PIINSBILLINGINFO.getSheetName();
+	private String dataSheetPath = GlobalVariable.TestData + "/" + DataFiles.PIINSBILLINGINFO.getSheetName();
 
 	private HashMap pageData;
 
 	public PIInsBillingInfo() {
 
-		pageData = new Customkeywords().retrieveTestCaseData(dataSheetPath, GlobalVariable.TestData['Test Case']);
+		pageData = new Customkeywords().retrieveTestCaseData(dataSheetPath, GlobalVariable.TestCase);
 	}
 
-	@Given("PI InsBilling Info - (.*)")
+	@Given("Enter PI InsBilling Info details - (.*)")
 	def pIInsBillingInfo(String index) {
-		WebUI.callTestCase(findTestCase('Test Cases/MSLScreens/NewQuote'), ['pageData' :pageData, 'index' :index])
+		WebUI.callTestCase(findTestCase('Test Cases/MSLScreens/PI_InsBillingInfo'), ['pageData' :pageData, 'index' :index])
 	}
 }

@@ -3,6 +3,6 @@
    <description></description>
    <name>Sel_PI_PolicyPlan</name>
    <tag></tag>
-   <locator>Full Pay</locator>
+   <locator>${value}</locator>
    <locatorStrategy>NAME</locatorStrategy>
 </WindowsElementEntity>

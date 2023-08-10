@@ -26,13 +26,13 @@ import dataenum.DataFiles
 class LaunchApplication {
 
 
-	private String dataSheetPath = GlobalVariable.TestData['Group'] + "/" + DataFiles.LAUNCHAPP.getSheetName();
+	private String dataSheetPath = GlobalVariable.TestData + "/" + DataFiles.LAUNCHAPP.getSheetName();
 
 	private HashMap pageData;
 
 	public LaunchApplication() {
 
-		pageData = new Customkeywords().retrieveTestCaseData(dataSheetPath, GlobalVariable.TestData['Test Case']);
+		pageData = new Customkeywords().retrieveTestCaseData(dataSheetPath, GlobalVariable.TestCase);
 	}
 
 	@Given("Launch MSL Application - (.*)")

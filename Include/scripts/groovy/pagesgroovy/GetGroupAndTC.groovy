@@ -25,8 +25,7 @@ public class GetGroupAndTC {
 
 	@Given("Get Group and TC data (.*) - (.*)")
 	def getGroupAndTC(String group, String testCase) {
-		GlobalVariable.TestData['Group'] = group
-		GlobalVariable.TestData['Test Case'] = testCase
-		println(GlobalVariable.TestData['Group'])
+		GlobalVariable.TestData = group
+		GlobalVariable.TestCase = testCase
 	}
 }

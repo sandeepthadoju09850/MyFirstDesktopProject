@@ -3,6 +3,6 @@
    <description></description>
    <name>Sel_PI_AgencyName</name>
    <tag></tag>
-   <locator>480001 - WI Agency</locator>
+   <locator>${value}</locator>
    <locatorStrategy>NAME</locatorStrategy>
 </WindowsElementEntity>

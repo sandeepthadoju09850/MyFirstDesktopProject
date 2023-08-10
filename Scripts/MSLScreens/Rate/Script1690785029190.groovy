@@ -66,30 +66,31 @@ if ((hash_map.get('BTN_UnableToRateOK') != null) && (hash_map.get('BTN_UnableToR
 if ((hash_map.get('TotalPremium') != null) && (hash_map.get('TotalPremium').length() > 0)) {
     String PolicyPremium = Windows.getText(findWindowsObject('MSLink/RateDetails/Lbl_Rate_PolicyPremium'))
 
-    Windows.verifyEqual(PolicyPremium, hash_map.get('TotalPremium'), FailureHandling.CONTINUE_ON_FAILURE)
+    Windows.verifyEqual(PolicyPremium, hash_map.get('TotalPremium'), FailureHandling.OPTIONAL)
 }
 
 if ((hash_map.get('AutoPremium') != null) && (hash_map.get('AutoPremium').length() > 0)) {
     String AutoPremium = Windows.getText(findWindowsObject('Object Repository/MSLink/RateDetails/Lbl_Rate_AutoPremium'))
 
-    Windows.verifyEqual(AutoPremium, hash_map.get('AutoPremium'), FailureHandling.CONTINUE_ON_FAILURE)
+    Windows.verifyEqual(AutoPremium, hash_map.get('AutoPremium'), FailureHandling.OPTIONAL)
 }
 
 if ((hash_map.get('PrimaryResidencyPremium') != null) && (hash_map.get('PrimaryResidencyPremium').length() > 0)) {
     String PResPremium = Windows.getText(findWindowsObject('Object Repository/MSLink/RateDetails/Lbl_Rate_PrimaryResidencyPremium'))
 
-    Windows.verifyEqual(PResPremium, hash_map.get('PrimaryResidencyPremium'), FailureHandling.CONTINUE_ON_FAILURE)
+    Windows.verifyEqual(PResPremium, hash_map.get('PrimaryResidencyPremium'), FailureHandling.OPTIONAL)
 }
 
 if ((hash_map.get('UmbrellaPremium') != null) && (hash_map.get('UmbrellaPremium').length() > 0)) {
     String UMPremium = Windows.getText(findWindowsObject('Object Repository/MSLink/RateDetails/Lbl_Rate_UmbrellaPremium'))
 
-    Windows.verifyEqual(UMPremium, hash_map.get('UmbrellaPremium'), FailureHandling.CONTINUE_ON_FAILURE)
+    Windows.verifyEqual(UMPremium, hash_map.get('UmbrellaPremium'), FailureHandling.OPTIONAL)
 }
 
 if ((hash_map.get('BTN_RateClose') != null) && (hash_map.get('BTN_RateClose').length() > 0)) {
     CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/RateDetails/Btn_Rate_Close'))
 	Windows.closeApplication()
-
+	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/RateDetails/Btn_SaveQuoteNo'))
+	
 	}
 

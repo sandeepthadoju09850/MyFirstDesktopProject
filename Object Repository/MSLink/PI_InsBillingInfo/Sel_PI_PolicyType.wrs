@@ -3,6 +3,6 @@
    <description></description>
    <name>Sel_PI_PolicyType</name>
    <tag></tag>
-   <locator>MILE-STONE</locator>
+   <locator>${value}</locator>
    <locatorStrategy>NAME</locatorStrategy>
 </WindowsElementEntity>
