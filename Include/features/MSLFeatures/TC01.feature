@@ -1,7 +1,7 @@
 
-Feature: Login
+Feature: TC01_WI
  
-  Scenario Outline: Valid Login
+  Scenario Outline: TC01_WI
   
     Given Get Group and TC data <GROUP> - <TC>
     When Launch MSL Application - NewQuote
