@@ -39,7 +39,7 @@ CustomKeywords.'getScreensDetails.GetHomeDwellingInfoDetails.getHomeDwellingInfo
 
 CustomKeywords.'getScreensDetails.GetUmbrellaDetails.getUmbrellaDetails'('NewQuote')
 
-CustomKeywords.'getScreensDetails.GetOtherInfoAutoDetails.getOtherInfoAutoDetails'('NewQuote')
+//CustomKeywords.'getScreensDetails.GetOtherInfoAutoDetails.getOtherInfoAutoDetails'('NewQuote')
 
 //CustomKeywords.'getScreensDetails.GetOtherInfoPrimaryDwellingDetails.getOtherInfoPrimaryDwellingDetails'('NewQuote')
 

@@ -17,6 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+
 def strIndex = "$index"
 
 def hash_map = pageData.get((GlobalVariable.TestCase + '-') + strIndex)
@@ -64,27 +65,49 @@ if ((hash_map.get('BTN_UnableToRateOK') != null) && (hash_map.get('BTN_UnableToR
 }
 
 if ((hash_map.get('TotalPremium') != null) && (hash_map.get('TotalPremium').length() > 0)) {
-    String PolicyPremium = Windows.getText(findWindowsObject('MSLink/RateDetails/Lbl_Rate_PolicyPremium'))
-
-    Windows.verifyEqual(PolicyPremium, hash_map.get('TotalPremium'), FailureHandling.OPTIONAL)
+    GlobalVariable.ActTotalPolicyPremium = Windows.getText(findWindowsObject('MSLink/RateDetails/Lbl_Rate_PolicyPremium'))
+	GlobalVariable.ExptTotalPolicyPremium = hash_map.get('TotalPremium')
+	if(GlobalVariable.ActTotalPolicyPremium.equals(GlobalVariable.ExptTotalPolicyPremium)) {
+		GlobalVariable.TotalPremiumResult='Pass'
+	}else {
+		GlobalVariable.TotalPremiumResult='Fail'
+	}
+    Windows.verifyEqual(GlobalVariable.ActTotalPolicyPremium, GlobalVariable.ExptTotalPolicyPremium, FailureHandling.OPTIONAL)
 }
 
 if ((hash_map.get('AutoPremium') != null) && (hash_map.get('AutoPremium').length() > 0)) {
-    String AutoPremium = Windows.getText(findWindowsObject('Object Repository/MSLink/RateDetails/Lbl_Rate_AutoPremium'))
-
-    Windows.verifyEqual(AutoPremium, hash_map.get('AutoPremium'), FailureHandling.OPTIONAL)
+    GlobalVariable.ActAutoPremium = Windows.getText(findWindowsObject('Object Repository/MSLink/RateDetails/Lbl_Rate_AutoPremium'))
+	GlobalVariable.ExptAutoPremium = hash_map.get('AutoPremium')
+	if(GlobalVariable.ActAutoPremium.equals(GlobalVariable.ExptAutoPremium)) {
+		GlobalVariable.AutoPremiumResult='Pass'
+	}else {
+		GlobalVariable.AutoPremiumResult='Fail'
+	}
+    Windows.verifyEqual(GlobalVariable.ActAutoPremium, GlobalVariable.ExptAutoPremium, FailureHandling.OPTIONAL)
 }
 
 if ((hash_map.get('PrimaryResidencyPremium') != null) && (hash_map.get('PrimaryResidencyPremium').length() > 0)) {
-    String PResPremium = Windows.getText(findWindowsObject('Object Repository/MSLink/RateDetails/Lbl_Rate_PrimaryResidencyPremium'))
-
-    Windows.verifyEqual(PResPremium, hash_map.get('PrimaryResidencyPremium'), FailureHandling.OPTIONAL)
+    GlobalVariable.ActPrimaryResidencyPremium = Windows.getText(findWindowsObject('Object Repository/MSLink/RateDetails/Lbl_Rate_PrimaryResidencyPremium'))
+	GlobalVariable.ExptPrimaryResidencyPremium = hash_map.get('PrimaryResidencyPremium')
+    
+	if(GlobalVariable.ActPrimaryResidencyPremium.equals(GlobalVariable.ExptPrimaryResidencyPremium)) {
+		GlobalVariable.PrimaryResidencyPremiumResult='Pass'
+	}else {
+		GlobalVariable.PrimaryResidencyPremiumResult='Fail'
+	}
+	Windows.verifyEqual(GlobalVariable.ActPrimaryResidencyPremium, GlobalVariable.ExptPrimaryResidencyPremium, FailureHandling.OPTIONAL)
 }
 
 if ((hash_map.get('UmbrellaPremium') != null) && (hash_map.get('UmbrellaPremium').length() > 0)) {
-    String UMPremium = Windows.getText(findWindowsObject('Object Repository/MSLink/RateDetails/Lbl_Rate_UmbrellaPremium'))
-
-    Windows.verifyEqual(UMPremium, hash_map.get('UmbrellaPremium'), FailureHandling.OPTIONAL)
+    GlobalVariable.ActUmbrellaPremium = Windows.getText(findWindowsObject('Object Repository/MSLink/RateDetails/Lbl_Rate_UmbrellaPremium'))
+	GlobalVariable.ExptUmbrellaPremium = hash_map.get('UmbrellaPremium')
+	
+	if(GlobalVariable.ActUmbrellaPremium.equals(GlobalVariable.ExptUmbrellaPremium)) {
+		GlobalVariable.UmbrellaPremiumResult='Pass'
+	}else {
+		GlobalVariable.UmbrellaPremiumResult='Fail'
+	}
+	Windows.verifyEqual(GlobalVariable.ActUmbrellaPremium, GlobalVariable.ExptUmbrellaPremium, FailureHandling.OPTIONAL)
 }
 
 if ((hash_map.get('BTN_RateClose') != null) && (hash_map.get('BTN_RateClose').length() > 0)) {
