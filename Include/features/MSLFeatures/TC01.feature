@@ -12,8 +12,7 @@ Feature: TC01_WI
     Then Enter Driver HH Member Details - NewQuoteTwo
     Then Enter Driver Assignment details - NewQuote
    	Then Enter Home Dwelling details - NewQuote
-   	Then Enter Umbrella details - NewQuote
-   	Then Enter Other Info Auto details - NewQuote
+   	Then Enter Umbrella details - NewQuote   	
    	Then Verify rate details - NewQuote
    	Then Enter Home Dwelling details - NewQuoteRedo
    	Then Verify rate details - NewQuoteRedo

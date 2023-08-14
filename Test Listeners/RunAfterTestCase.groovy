@@ -61,28 +61,45 @@ class RunAfterTestCase {
 		rowhead.createCell(2).setCellValue("ExpectedPremiums");
 		rowhead.createCell(3).setCellValue("Pass/Fail");
 		
-		
-	 
-		XSSFRow row = sheet.createRow((short)1);
+		int i=1;
+		if ((GlobalVariable.ActAutoPremium != null) && (GlobalVariable.ActAutoPremium.length() > 0)) {
+		XSSFRow row = sheet.createRow((short)i);
 		row.createCell(0).setCellValue("AutoPremium");
 		row.createCell(1).setCellValue(GlobalVariable.ActAutoPremium)
 		row.createCell(2).setCellValue(GlobalVariable.ExptAutoPremium)
 		row.createCell(3).setCellValue(GlobalVariable.AutoPremiumResult)
-		XSSFRow row2 = sheet.createRow((short)2);
+		i++;
+		}
+		
+		if ((GlobalVariable.ActPrimaryResidencyPremium != null) && (GlobalVariable.ActPrimaryResidencyPremium.length() > 0)) {
+		XSSFRow row2 = sheet.createRow((short)i);
 		row2.createCell(0).setCellValue("PrimaryResidencyPremium");
 		row2.createCell(1).setCellValue(GlobalVariable.ActPrimaryResidencyPremium)
 		row2.createCell(2).setCellValue(GlobalVariable.ExptPrimaryResidencyPremium)
 		row2.createCell(3).setCellValue(GlobalVariable.PrimaryResidencyPremiumResult)
-		XSSFRow row3 = sheet.createRow((short)3);
+		i++;
+		}
+		
+		if ((GlobalVariable.ActSecondaryResidencyPremium != null) && (GlobalVariable.ActSecondaryResidencyPremium.length() > 0)) {
+			
+		XSSFRow row3 = sheet.createRow((short)i);
 		row3.createCell(0).setCellValue("SecondaryResidencyPremium");
-		//row3.createCell(1).setCellValue(GlobalVariable.ActPrimaryResidencyPremium)
-		//row3.createCell(2).setCellValue(GlobalVariable.ExptPrimaryResidencyPremium)
-		XSSFRow row4 = sheet.createRow((short)4);
+		row3.createCell(1).setCellValue(GlobalVariable.ActSecondaryResidencyPremium)
+		row3.createCell(2).setCellValue(GlobalVariable.ExptSecondaryResidencyPremium)
+		i++;
+		}
+		
+		if ((GlobalVariable.ActUmbrellaPremium != null) && (GlobalVariable.ActUmbrellaPremium.length() > 0)) {
+			
+		XSSFRow row4 = sheet.createRow((short)i);
 		row4.createCell(0).setCellValue("UmbrellaPremium");
 		row4.createCell(1).setCellValue(GlobalVariable.ActUmbrellaPremium)
 		row4.createCell(2).setCellValue(GlobalVariable.ExptUmbrellaPremium)
 		row4.createCell(3).setCellValue(GlobalVariable.UmbrellaPremiumResult)
-		XSSFRow row5 = sheet.createRow((short)5);
+		i++;
+		}
+		
+		XSSFRow row5 = sheet.createRow((short)i);
 		row5.createCell(0).setCellValue("TotalPremium");
 		row5.createCell(1).setCellValue(GlobalVariable.ActTotalPolicyPremium)
 		row5.createCell(2).setCellValue(GlobalVariable.ExptTotalPolicyPremium)

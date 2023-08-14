@@ -79,4 +79,19 @@
       <initValue>''</initValue>
       <name>PrimaryResidencyPremiumResult</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>ExptSecondaryResidencyPremium</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>ActSecondaryResidencyPremium</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>SecondaryPremiumResult</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
