@@ -3,6 +3,6 @@
    <description></description>
    <name>ChooseState</name>
    <tag></tag>
-   <locator>WindowsForms10.COMBOBOX.app.0.141b42a_r21_ad1</locator>
-   <locatorStrategy>CLASS_NAME</locatorStrategy>
+   <locator>Choose State</locator>
+   <locatorStrategy>NAME</locatorStrategy>
 </WindowsElementEntity>

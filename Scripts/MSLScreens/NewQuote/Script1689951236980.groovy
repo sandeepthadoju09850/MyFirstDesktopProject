@@ -22,7 +22,7 @@ import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable
 import customeKeyword.Customkeywords
 import customeKeyword.WindowsImprovedKeywords
-import utilsExcel.CreateExcel
+
 import dataenum.DataFiles
 
 
@@ -57,7 +57,7 @@ if ((hash_map.get('StateButton') != null) && (hash_map.get('StateButton').length
 if ((hash_map.get('SelectState') != null) && (hash_map.get('SelectState').length() > 0)) {
     CustomKeywords.'customeKeyword.Customkeywords.sendKeys'(findWindowsObject('Object Repository/MSLink/AppLaunch/ChooseState'), hash_map.get('SelectState'))
 
-    Windows.click(findWindowsObject('Object Repository/MSLink/AppLaunch/listState'))
+    //Windows.click(findWindowsObject('Object Repository/MSLink/AppLaunch/listState'))
 
     Windows.click(findWindowsObject('Object Repository/MSLink/AppLaunch/btnOk'))
 

@@ -35,18 +35,23 @@ if ((hash_map.get('BTN_AddressValidationYes') != null) && (hash_map.get('BTN_Add
 
     Windows.delay(5)
 	
-	/*Windows.switchToDesktop()
-
-	CustomKeywords.'customeKeyword.WindowsImprovedKeywords.switchToWindowTitle'('MS-Link')
 	
-	Windows.closeApplication()
 	
-	//CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/RateDetails/Btn_Win_Close'))
-	
-	CustomKeywords.'customeKeyword.WindowsImprovedKeywords.switchToWindowTitle'('SECURA\'s MILE-STONe Link')
-	*/
 }
-
+/*
+if ((hash_map.get('MSL_StopedWorking') != null) && (hash_map.get('MSL_StopedWorking').length() > 0)) {
+	
+	Windows.switchToDesktop()
+	
+		CustomKeywords.'customeKeyword.WindowsImprovedKeywords.switchToWindowTitle'('MS-Link')
+		
+		Windows.closeApplication()
+		
+		//CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/RateDetails/Btn_Win_Close'))
+		
+		CustomKeywords.'customeKeyword.WindowsImprovedKeywords.switchToWindowTitle'('SECURA\'s MILE-STONe Link')
+}
+*/
 if ((hash_map.get('BTN_RateMessageOK') != null) && (hash_map.get('BTN_RateMessageOK').length() > 0)) {
 	Windows.delay(5)
     CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/RateDetails/Btn_RateMessage_OK'))

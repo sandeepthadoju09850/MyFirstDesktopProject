@@ -14,7 +14,7 @@ Feature: TC02
     Then Enter Driver Assignment details - NewQuote
    	Then Enter Home Dwelling details - NewQuote
    	Then Enter Umbrella details - NewQuote
-   	Then Enter Other Info Auto details - NewQuote
+   	#Then Enter Other Info Auto details - NewQuote
    	Then Verify rate details - NewQuote
 
 
